@@ -1,0 +1,47 @@
+{
+  "colors": {
+    "primary": "#3B82F6",
+    "secondary": "#6366F1",
+    "background": "#111827",
+    "cardBackground": "#1F2937",
+    "headerBackground": "#111827",
+    "text": "#F9FAFB",
+    "textSecondary": "#D1D5DB",
+    "border": "#374151",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "background": "#3B82F6",
+        "hover": "#2563EB",
+        "text": "#FFFFFF"
+      },
+      "secondary": {
+        "background": "transparent",
+        "hover": "#374151",
+        "text": "#F9FAFB",
+        "border": "#4B5563"
+      }
+    },
+    "card": {
+      "background": "#1F2937",
+      "border": "#374151",
+      "headerBackground": "#374151"
+    },
+    "input": {
+      "background": "#374151",
+      "border": "#4B5563",
+      "text": "#F9FAFB",
+      "placeholder": "#9CA3AF"
+    }
+  }
+}
+
