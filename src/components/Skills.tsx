@@ -6,6 +6,7 @@ import { useState } from "react"
 import { Typography, Row, Col, Card, Modal } from "antd"
 import { useTheme } from "../contexts/ThemeContext"
 import { CodeOutlined, AppstoreOutlined, CloudOutlined, ToolOutlined } from "@ant-design/icons"
+import { useMediaQuery } from "../hooks/useMediaQuery"
 
 const { Title } = Typography
 
@@ -25,6 +26,7 @@ const Skills = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<SkillCategory | null>(null)
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
+  const isMobile = useMediaQuery("(max-width: 768px)")
 
   const skillCategories: SkillCategory[] = [
     {
@@ -110,7 +112,7 @@ const Skills = () => {
             Skills
           </Title>
 
-          <Row gutter={[32, 32]}>
+          <Row gutter={[16, 16]}>
             {skillCategories.map((category, index) => (
                 <Col xs={24} sm={12} md={6} key={index}>
                   <Card
@@ -120,7 +122,7 @@ const Skills = () => {
                       }`}
                       bodyStyle={{
                         backgroundColor: theme === "dark" ? "#1f2937" : "",
-                        padding: "32px 24px",
+                        padding: isMobile ? "24px 16px" : "32px 24px",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
@@ -146,7 +148,7 @@ const Skills = () => {
               open={modalVisible}
               onCancel={handleModalClose}
               footer={null}
-              width={800}
+              width={isMobile ? "95%" : 800}
               className={theme === "dark" ? "dark-modal" : ""}
           >
             {selectedCategory && (
@@ -191,4 +193,3 @@ const Skills = () => {
 }
 
 export default Skills
-

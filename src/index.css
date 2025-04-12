@@ -38,6 +38,53 @@ body {
   color: white;
 }
 
+/* Dark theme for form elements */
+.dark-theme .ant-input,
+.dark-theme .ant-input-affix-wrapper,
+.dark-theme .ant-select-selector {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+  color: white !important;
+}
+
+.dark-theme .ant-input::placeholder {
+  color: #9ca3af !important;
+}
+
+.dark-theme .ant-form-item-label > label {
+  color: #d1d5db !important;
+}
+
+.dark-theme .ant-menu {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.dark-theme .ant-menu-item:hover {
+  color: #3b82f6 !important;
+}
+
+.dark-theme .ant-menu-item-selected {
+  color: #3b82f6 !important;
+}
+
+.dark-theme .ant-drawer-header {
+  background-color: #1f2937 !important;
+  border-bottom: 1px solid #374151 !important;
+}
+
+.dark-theme .ant-drawer-title {
+  color: white !important;
+}
+
+.dark-theme .ant-drawer-close {
+  color: #9ca3af !important;
+}
+
+.dark-theme .ant-drawer-content {
+  background-color: #1f2937 !important;
+}
+
 /* Carousel arrows */
 .ant-carousel .slick-prev,
 .ant-carousel .slick-next {
@@ -105,3 +152,13 @@ body {
   transform: rotateY(180deg);
 }
 
+/* Fix for mobile overlapping issues */
+@media (max-width: 768px) {
+  .ant-space {
+    flex-wrap: wrap;
+  }
+
+  .ant-space-item {
+    margin-bottom: 8px !important;
+  }
+}
